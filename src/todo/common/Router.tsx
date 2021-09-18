@@ -4,11 +4,13 @@ import App from "../../App";
 import List from "../List";
 
 const Router = () => {
-  <BrowserRouter>
-    <Switch>
-      <Route path="/" component={App}/>
-      <Route path="/board" component={List}/>
-      <Route/>
-    </Switch>
-  </BrowserRouter>
-}
+  return(
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" component={App}/>
+        <Route path="/list" component={List}/>
+        <Route/>
+      </Switch>
+    </BrowserRouter>
+  );
+};
