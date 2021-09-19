@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import App from "../../App";
-import List from "../List";
+import List from "../basic/List";
 
 const Router = () => {
   return(
@@ -14,3 +14,4 @@ const Router = () => {
     </BrowserRouter>
   );
 };
+export default Router;
