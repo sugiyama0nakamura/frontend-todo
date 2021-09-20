@@ -1,15 +1,16 @@
 import React from "react";
-// import { Button } from "@material-ui/core";
-// import { TextField } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import { TextField } from "@material-ui/core";
+import Header from "../common/Header";
 
-export default class List extends React.Component{
-  render(){
+function List (){
     return(
-      <div>aaaa
-        <div>
-          bbbb
+      <div>
+        <div id="header">
+          <Header/>
         </div>
+        <h1>List</h1>
       </div>
     )
-  }
 }
+export default List;
