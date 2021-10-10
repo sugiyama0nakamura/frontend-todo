@@ -1,0 +1,12 @@
+{"data":[
+    {
+      "listId":1,"userId":1,"boardId":1,"listName":"todo","createUser":"1","createDay":null,"updateUser":null,"updateDay":null,"deleteFlg":false,"deadlineStartDate":null,"deadlineEndtDate":null
+    },
+    {
+      "listId":2,"userId":2,"boardId":1,"listName":"todo2","createUser":"1","createDay":null,"updateUser":null,"updateDay":null,"deleteFlg":false,"deadlineStartDate":null,"deadlineEndtDate":null
+    },
+    {
+      "listId":3,"userId":3,"boardId":1,"listName":"todo3","createUser":"1","createDay":null,"updateUser":null,"updateDay":null,"deleteFlg":false,"deadlineStartDate":null,"deadlineEndtDate":null
+    }
+  ]
+}

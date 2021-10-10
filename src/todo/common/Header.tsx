@@ -6,7 +6,12 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import Search from "./Search";
 
+/**
+ * ヘッダコンポーネント
+ * @returns ヘッダのコンポーネント
+ */
 export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -15,6 +20,7 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Todo
           </Typography>
+          <Search/>
           <IconButton
             size="large"
             edge="start"

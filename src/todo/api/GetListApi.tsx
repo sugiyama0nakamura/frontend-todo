@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import type {ListForm} from "../basic/List/ListForm";
 
 /**
  * axiosでListの取得コンポーネント
@@ -7,7 +8,8 @@ import axios from "axios";
 export default class GetListApi extends React.Component{
   //setStateで格納する
   state = {
-    lists: []
+    lists: [],
+    listName: []
   }
 
   //axiosでlist一覧を取得
@@ -17,7 +19,10 @@ export default class GetListApi extends React.Component{
     .then(res => {
       //stateにlist情報を格納
       const lists = res.data;
-      this.setState({ lists })
+      const listName = lists.data.listName;
+      console.log(lists);
+      console.log(listName);
+      this.setState({ lists, listName })
     })
     .catch(error => {
       console.log(error);
@@ -27,8 +32,8 @@ export default class GetListApi extends React.Component{
   //list情報の出力
   render(){
     return(
-      <ul>
-        { this.state.lists.map(list => <li>{ list }</li>)}
+      <ul>        
+        { this.state.listName}
       </ul>
     )
   }
