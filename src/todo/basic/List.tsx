@@ -50,6 +50,7 @@ export default class List extends React.Component{
               </div>
               <button type="submit" onClick={this.addList}>追加</button>
             </form>
+            
             {/* カード表示 */}
             <ul>
               { this.state.lists}
