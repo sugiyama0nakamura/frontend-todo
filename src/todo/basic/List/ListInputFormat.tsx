@@ -21,7 +21,6 @@ export default class ListInputFormat extends React.Component{
         <div className="form-group">
           <input type="text" name="list-name"/>
         </div>
-        
         <button type="submit" onClick={this.addList}>追加</button>
       </form>
     );
