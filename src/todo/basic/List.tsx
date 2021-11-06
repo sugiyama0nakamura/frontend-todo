@@ -1,35 +1,37 @@
-import React from "react";
+import React, {Component} from "react";
 import { Button } from "@material-ui/core";
 import { TextField } from "@material-ui/core";
 import Header from "../common/Header";
-import ListForm from "./List/ListInputFormat";
-import ListList from "./List/ListList";
-import GetListApi from "../api/GetListApi";
 import ListInputFormat from "./List/ListInputFormat";
+import GetListApi from "../api/GetListApi";
 import json from "../api/SampleList.json";
+// import SampleJson from "../api/SampleJson";
+import { ListForm } from "./List/ListForm";
+import { string } from "yargs";
 
-export default class List extends React.Component{
-  state = {
-    lists: [],
-    listName: ''
+type Props = {
+  lists: ListForm[];
+}
+
+export default class List extends Component<{}, Props>{
+  constructor(props: Props){
+    super(props);
+    this.state = {
+      lists: []
+    };
+    this.listAdd = this.listAdd.bind(this);
   }
 
-  componentDidMount(){
-    const lists = json.data.map((list) => 
-    <div key={list.listId}>
-       <div>{list.listName}</div>
-       <div hidden>{list.boardId}</div>
-       <div hidden>{list.listId}</div>
-    </div>
-    );
-    this.setState({ lists })
-  }
-
-  addList = () => {
-    const {listName} = this.state;
-    this.setState({
-      listName
-    })
+  listAdd(e: any){
+    console.log(e.target.listName.value);
+    // リダイレクト防止
+    e.preventDefault();
+    // フォームから受け取ったデータをオブジェクトに挿入して、stateのlists配列に追加
+    // this.state.lists.push(lists: e.target.listName.value);
+    // this.state.lists.push( listNmae: e.target.lists );
+    // setStateを使ってstateを上書き
+    this.setState({ lists: this.state.lists })
+    e.target.listName.value = '';
   }
 
     render(){
@@ -42,19 +44,9 @@ export default class List extends React.Component{
           {/* メイン */}
           <div id="main">
             <h1>List</h1>
-            {/* カード作成 */}
-            <form onSubmit={(event) => event.preventDefault()} action="http://localhost:8080/api/v1/cards" method="post">
-              <h2>カード追加</h2>
-              <div className="form-group">
-                <input type="text" name="listName"/>
-              </div>
-              <button type="submit" onClick={this.addList}>追加</button>
-            </form>
-            
-            {/* カード表示 */}
-            <ul>
-              { this.state.lists}
-            </ul>
+            <ListInputFormat listAdd={this.listAdd}/>
+            {/* <SampleJson lists={this.state.lists}/> */}
+            {/* <SampleJson lists={this.state.lists}/> */}
           </div>
         </div>
       )

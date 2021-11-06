@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import type {ListForm} from "../basic/List/ListForm";
+import { ListForm } from "../basic/List/ListForm";
 
 /**
  * axiosでListの取得コンポーネント

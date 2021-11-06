@@ -1,8 +1,7 @@
 import React,{ useState } from 'react'
-import './App.css';
-import { Task } from './todo/sample/Types'
-import TaskInput from './todo/sample/TaskInput'
-import TaskList from './todo/sample/TaskList'
+import { Task } from './Types'
+import TaskInput from './TaskInput'
+import TaskList from './TaskList'
 
 
 
@@ -20,7 +19,7 @@ const initialState: Task[] = [
 ]
 
 
-const App:React.FC = () => {
+const Sample = () => {
 const [tasks, setTasks] = useState(initialState)
   return (
     <div className="todo-container">
@@ -32,4 +31,4 @@ const [tasks, setTasks] = useState(initialState)
   );
 }
 
-export default App;
+export default Sample;
