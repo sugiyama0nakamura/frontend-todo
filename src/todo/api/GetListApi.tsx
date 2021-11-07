@@ -11,7 +11,7 @@ export default class GetListApi extends React.Component{
     lists: [],
     listName: []
   }
-
+  
   //axiosでlist一覧を取得
   componentDidMount(){
     axios.get(`http://localhost:8080/api/v1/lists`)

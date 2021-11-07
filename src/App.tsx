@@ -1,34 +1,26 @@
-import React,{ useState } from 'react'
+// import React from 'react';
+// import logo from './logo.svg';
 import './App.css';
-import { Task } from './todo/sample/Types'
-import TaskInput from './todo/sample/TaskInput'
-import TaskList from './todo/sample/TaskList'
 
-
-
-const initialState: Task[] = [
-  {
-    id: 2,
-    title: 'Hello World',
-    done: false
-  },
-  {
-    id: 1,
-    title: 'Start React Todo App by TS',
-    done: false
-  }
-]
-
-
-const App:React.FC = () => {
-const [tasks, setTasks] = useState(initialState)
+function App() {
   return (
-    <div className="todo-container">
-      <div className="todo-component">
-        <TaskInput setTasks={setTasks} tasks={tasks} />
-        <TaskList setTasks={setTasks} tasks={tasks} />
-      </div>
-    </div>
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.tsx</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
+    <h1>Home</h1>
   );
 }
 

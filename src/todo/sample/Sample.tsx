@@ -6,16 +6,6 @@ import TaskList from './TaskList'
 
 
 const initialState: Task[] = [
-  {
-    id: 2,
-    title: 'Hello World',
-    done: false
-  },
-  {
-    id: 1,
-    title: 'Start React Todo App by TS',
-    done: false
-  }
 ]
 
 
